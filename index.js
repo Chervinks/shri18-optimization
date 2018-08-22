@@ -17,12 +17,12 @@ const modes = {
 
 loadData = (path) => {
     return require(path);
-}
+};
 
 writeData = (object, path) => {
     let fs = require('fs');
-    fs.writeFile(path, JSON.stringify(object, null, 3), function(err) {
-        if(err) {
+    fs.writeFile(path, JSON.stringify(object, null, 3), function (err) {
+        if (err) {
             console.log(err);
         } else {
             console.log("JSON saved to " + path);
@@ -75,7 +75,7 @@ countPossibleCosts = (device, rates) => {
         }
         return a[1] - b[1];
     }));
-}
+};
 
 /* Инициализация объекта вывода */
 
@@ -83,8 +83,8 @@ initializeOutput = () => {
     let output = {
         'schedule': {},
         'consumedEnergy': {
-            'value' : 0,
-            'devices' : {}
+            'value': 0,
+            'devices': {}
         }
     };
 
@@ -93,7 +93,7 @@ initializeOutput = () => {
     }
 
     return output;
-}
+};
 
 /* Создание расписания */
 
